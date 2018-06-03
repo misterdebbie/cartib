@@ -7,4 +7,8 @@ Movie.findAll = () => {
   );
 };
 
+Movie.findById = id => {
+  return db.oneOrNone(`SELECT * FROM movies WHERE id = $1`,[id]);
+};
+
 module.exports = Movie;
