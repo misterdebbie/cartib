@@ -1,1 +1,12 @@
 <h3>hello from index.ejs</h3>
+
+<% movies.forEach(movie => { %>
+   <div class="movie">
+     <h4>
+       <a href="<%= `/movies/${movie.id}` %>">
+         <%= movie.title %>
+       </a>
+     </h4>
+     <p><%= movie.description %></p>
+   </div>
+ <% }) %>
